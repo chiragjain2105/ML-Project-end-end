@@ -1,0 +1,15 @@
+artifact_uri: file:///C:/Users/chirag/Desktop/ML-Project/ML-Project-end-end/mlruns/0/c5a14549527949a498871c7bbcf91ce9/artifacts
+end_time: 1714558664922
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: c5a14549527949a498871c7bbcf91ce9
+run_name: awesome-boar-694
+run_uuid: c5a14549527949a498871c7bbcf91ce9
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1714558653787
+status: 3
+tags: []
+user_id: chirag
