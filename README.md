@@ -1,0 +1,1 @@
+to run pip install -r requirements_dev.txt, your setup.py file must be configured
