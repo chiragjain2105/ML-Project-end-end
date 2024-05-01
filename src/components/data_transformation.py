@@ -52,7 +52,7 @@ class DataTransformation:
             )
             
             preprocessor = ColumnTransformer([
-                ('num_pipeline',num_pipeline,numerical_cols)
+                ('num_pipeline',num_pipeline,numerical_cols),
                 ('cat_pipeline',cat_pipeline,categorical_cols)
             ])
 
@@ -77,12 +77,12 @@ class DataTransformation:
             preprocessor_obj = self.get_data_tranformation()
 
             target_column_name = 'price'
-            drop_columns = ['target_column_name','id']
+            drop_columns = [target_column_name,'id']
 
             input_feature_train_df = train_df.drop(columns=drop_columns,axis=1)
             target_feature_train_df = train_df[target_column_name]
 
-            input_feature_test_df = train_df.drop(columns=drop_columns,axis=1)
+            input_feature_test_df = test_df.drop(columns=drop_columns,axis=1)
             target_feature_test_df = test_df[target_column_name]
 
             input_feature_train_arr = preprocessor_obj.fit_transform(input_feature_train_df)
@@ -91,7 +91,7 @@ class DataTransformation:
             logging.info("Applying preprocessing object on training and test datasets.")
 
             train_arr = np.c_[input_feature_train_arr, np.array(target_feature_train_df)]
-            test_arr = np.c_[input_feature_test_df, np.array(target_feature_test_df)]
+            test_arr = np.c_[input_feature_test_arr, np.array(target_feature_test_df)]
 
             save_objects(
                 file_path=self.data_transformation_config.preprocessor_obj_file_path,
