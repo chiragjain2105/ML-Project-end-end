@@ -11,3 +11,5 @@ Create virtual environment manually or use init_setup file
 6. Write your exception.py and logging.py files
 7. Split your ML Model into components - Data Ingestion, Data Transformation, model training (Also configure utils.py to write extra code)
 8. Prepare your Training pipeline to run the components
+9. Creating Flask App (app.py)
+10. For integrating MLFlow write the component i.e. Model Evaluation.
